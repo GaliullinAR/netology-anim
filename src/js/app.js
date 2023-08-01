@@ -1,4 +1,4 @@
-import CallbackChatWidget from "./CallbackChatWidget";
+import CallbackChatWidget from './CallbackChatWidget';
 
 const widget = new CallbackChatWidget(document.body);
 

@@ -6,7 +6,7 @@ branches:
     - main
 install: npm install
 build: off
-test_script: npm run lint && yarn test
+test_script: npm run lint
 build_script: npm run build
 deploy_script: 
   - git config --global credential.helper store

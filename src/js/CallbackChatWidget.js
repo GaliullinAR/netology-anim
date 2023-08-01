@@ -6,12 +6,12 @@ export default class CallbackChatWidget {
   }
 
   init() {
-    this.element = document.createElement("div");
-    this.element.classList.add("callback-chat-widget");
+    this.element = document.createElement('div');
+    this.element.classList.add('callback-chat-widget');
     this.container.appendChild(this.element);
 
-    this.form = document.createElement("div");
-    this.form.classList.add("chat-form", "hidden");
+    this.form = document.createElement('div');
+    this.form.classList.add('chat-form', 'hidden');
     this.form.innerHTML = `
       <div class="close-btn">X</div>
       <div class="title">Напишите нам</div>
@@ -20,21 +20,21 @@ export default class CallbackChatWidget {
     `;
     this.element.appendChild(this.form);
 
-    this.showFormBtn = document.createElement("div");
-    this.showFormBtn.classList.add("show-form-btn");
+    this.showFormBtn = document.createElement('div');
+    this.showFormBtn.classList.add('show-form-btn');
     this.element.appendChild(this.showFormBtn);
 
     this.form
-      .querySelector(".close-btn")
-      .addEventListener("click", this.toggleForm.bind(this));
-    this.showFormBtn.addEventListener("click", this.toggleForm.bind(this));
+      .querySelector('.close-btn')
+      .addEventListener('click', this.toggleForm.bind(this));
+    this.showFormBtn.addEventListener('click', this.toggleForm.bind(this));
   }
 
   toggleForm() {
-    this.form.classList.toggle("hidden");
-    this.showFormBtn.classList.toggle("hidden");
+    this.form.classList.toggle('hidden');
+    this.showFormBtn.classList.toggle('hidden');
     this.showFormBtn.style.zIndex = this.showFormBtn.classList.contains(
-      "hidden"
+      'hidden',
     )
       ? -1
       : 999;
